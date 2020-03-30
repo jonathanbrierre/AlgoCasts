@@ -38,6 +38,7 @@ function anagrams(stringA, stringB){
 function cleanStringArray(str){
     const cleaned = str.replace(/[^\w]/g, "").split('').sort().join('')
     return cleaned
+    
 }
 
 module.exports = anagrams;
