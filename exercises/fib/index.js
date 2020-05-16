@@ -44,7 +44,7 @@ function slowFib(n){
 
 let fib = memoize(slowFib)
 
-fib(7)
+slowFib(7)
 
 
-module.exports = fib;
+module.exports = slowFib;

@@ -67,16 +67,36 @@ class LinkedList {
         }
 
         let node = this.head
-        let nextNode = node.next
+        let nextNode = this.head.next
 
-        while(nextNode){
-            if(!nextNode.next){
-                node.next = null
-            }
+        while(nextNode.next){
             node = node.next
             nextNode = nextNode.next
-            
         }
+        
+        node.next = null
+    }
+
+    insertLast(data){
+        if(this.head === null){
+            this.head = new Node (data)
+        }else if(!this.head.next){
+            this.head.next = new Node (data)
+        }else{
+            let node = this.head.next
+            let nextNode = node.next
+
+            while(nextNode){
+                node = node.next
+                nextNode = nextNode.next
+            }
+
+            nextNode = new Node(data)
+
+        }
+        
+
+
     }
 }
 
