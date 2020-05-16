@@ -94,9 +94,22 @@ class LinkedList {
             nextNode = new Node(data)
 
         }
-        
+    }
 
-
+    getAt(integer){
+        if(!this.head){
+            return null
+        }
+        let i = 0
+        let node = this.head
+        while(node){
+            if(i === integer){
+                return node
+            }
+            i++
+            node = node.next
+        }
+        return null
     }
 }
 
